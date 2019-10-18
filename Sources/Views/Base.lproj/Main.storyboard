@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MockedStaticLibraryExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter thirteen:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="POa-Sc-Pjx">
+                                <rect key="frame" x="16" y="76" width="109.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDT-7h-0ih">
+                                <rect key="frame" x="16" y="105" width="382" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gq-K0-zs0"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="GwF-hT-Gz7"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAW-eU-KFq">
+                                <rect key="frame" x="368" y="143" width="30" height="30"/>
+                                <state key="normal" title="Go"/>
+                                <connections>
+                                    <action selector="goButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="OxH-1H-z5r"/>
+                                </connections>
+                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Result" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sef-eY-cdP">
+                                <rect key="frame" x="16" y="203" width="382" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xJB-yq-rfM">
+                                <rect key="frame" x="115" y="231.5" width="184" height="30"/>
+                                <state key="normal" title="Go to a much better library"/>
+                                <connections>
+                                    <action selector="betterLibraryButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bIT-P9-OBt"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="POa-Sc-Pjx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="7pV-dX-xGS"/>
+                            <constraint firstItem="Sef-eY-cdP" firstAttribute="top" secondItem="oAW-eU-KFq" secondAttribute="bottom" constant="30" id="Ha2-tv-pj2"/>
+                            <constraint firstItem="oAW-eU-KFq" firstAttribute="top" secondItem="UDT-7h-0ih" secondAttribute="bottom" constant="8" id="MCg-wo-Ggk"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="POa-Sc-Pjx" secondAttribute="trailing" priority="249" constant="16" id="dsP-8W-pnQ"/>
+                            <constraint firstItem="UDT-7h-0ih" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="j2j-JL-PsE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Sef-eY-cdP" secondAttribute="trailing" constant="16" id="miY-zc-Iib"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="UDT-7h-0ih" secondAttribute="trailing" constant="16" id="nx0-P2-5gR"/>
+                            <constraint firstItem="Sef-eY-cdP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="oVu-lA-exi"/>
+                            <constraint firstItem="UDT-7h-0ih" firstAttribute="top" secondItem="POa-Sc-Pjx" secondAttribute="bottom" constant="8" id="pUQ-un-w10"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oAW-eU-KFq" secondAttribute="trailing" constant="16" id="qBO-2T-UqU"/>
+                            <constraint firstItem="xJB-yq-rfM" firstAttribute="top" secondItem="Sef-eY-cdP" secondAttribute="bottom" constant="8" id="t4u-Pz-EbV"/>
+                            <constraint firstItem="oAW-eU-KFq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" priority="249" constant="16" id="vHh-wr-s1W"/>
+                            <constraint firstItem="POa-Sc-Pjx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wge-RO-Rqz"/>
+                            <constraint firstItem="xJB-yq-rfM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="whf-KQ-znx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="betterLibraryButton" destination="xJB-yq-rfM" id="qmT-pB-LZD"/>
+                        <outlet property="resultLabel" destination="Sef-eY-cdP" id="GIs-CD-oaO"/>
+                        <outlet property="textField" destination="UDT-7h-0ih" id="0u2-F3-fbN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="128.57142857142856"/>
+        </scene>
+    </scenes>
+</document>

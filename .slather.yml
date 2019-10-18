@@ -1,0 +1,9 @@
+ci_service: none
+coverage_service: cobertura_xml
+xcodeproj: InjectAndMockStaticFrameworksExample.xcodeproj
+scheme: InjectAndMockStaticFrameworksExample
+output_directory: ./slather/reports/
+ignore:
+  - Sources/AppDelegate.swift
+  - Sources/Frameworks/*
+  - Sources/Views/*
